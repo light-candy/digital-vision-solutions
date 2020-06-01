@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My first Bulma website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/590808821b.js" crossorigin="anonymous"></script>
+    <style>
+      .back{
+          background-image:url('./images/wire-pale-right.png');
+          background-size:cover;
+      }
+      .back2{
+           background-image:url('./images/right5.png');
+          background-size:cover;
+      }
+      .back3{
+           background-image:url('./images/right4.png');
+          background-size:cover;
+      }
+      @media screen and (min-width:769px){
+      .dig{
+           background-image:url('./images/eye.png');
+           background-size:cover;
+           
+      }
+      }
+      @media screen and (max-width:768px){
+           .dig{
+        background-image:url('./images/eye-back2.svg.png'),linear-gradient(rgb(134,187,216, 0.3),rgb(134,187,216, 0.7));
+        background-size:cover;
+        
+      }
+      }
+      
+      .image-mock-right{
+          position: absolute;
+          right: -300px;
+          top: 20px;
+          width: 728px;
+          margin-top: 10px;
+          border: 1px solid #e2e2e2;
+          border-radius: 4px;
+          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+      }
+      @media screen and (max-width: 1023px){
+          .image-mock-right{
+          position: absolute;
+          right: -350px;
+          top: 40px;
+          width: 728px;
+          margin-top: 10px;
+          }
+      } 
+      @media screen and (max-width:768px){
+          .image-mock-right{
+              position: relative;
+              top: 0;
+              right: 0;
+              width: 100%;
+              margin-bottom: 30px;
+          }
+      }
+      
+       .image-mock-left{
+          position: absolute;
+          left: -300px;
+          top: 20px;
+          width: 728px;
+          margin-top: 10px;
+          border: 1px solid #e2e2e2;
+          border-radius: 4px;
+          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+       }
+       @media screen and (max-width: 1023px){
+          .image-mock-left{
+          position: absolute;
+          left: -350px;
+          top: 40px;
+          width: 728px;
+          margin-top: 10px;
+          }
+      } 
+       @media screen and (max-width:768px){
+          .image-mock-left{
+              position: relative;
+              top: 0;
+              left: 0;
+              width: 100%;
+              margin-bottom: 30px;
+          }
+       }
+       
+       @media screen and (max-width:768px){
+       .direction-fix{
+           display:flex;
+           flex-direction:column-reverse;
+       }
+       }
+      .robo{
+          background-image:url('./images/micro.jpg');
+          background-size:cover;
+      }
+      .parallax {
+          background-image: url('./images/3.png');
+          height: 120px;
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      
+      
+      .is-thin-spaced{
+          line-height:0.6;
+      }
+     .is-medium-spaced{
+          line-height:0.9;
+     }
+     
+     @media screen and (min-width: 769px){
+     .has-padding-top-100{
+         padding-top:8rem !important;
+     }
+     }
+     @media screen and (max-width:768px){
+         .has-padding-top-100{
+             padding-top:4.5rem !important;
+         }
+     }
+     .menu-back{
+         display:none;
+         height:100vh;
+         width:100vw;
+         top:0;
+         bottom:0;
+         right:0;
+         left:0;
+         position:fixed;
+         background:#fff;
+         z-index:1;
+      }
+     .menu-list{
+         display:flex;
+         flex-direction:column;
+         align-items:center;
+         justify-content:center;
+         width:100%;
+         height:100%;
+         
+     }
+     .hero-pads{
+         padding-top:8rem;
+     }
+      
+      @media screen and (min-width: 769px){
+      .is-0-tablet{
+          font-size:100px;
+        
+      }
+      }
+      @media screen and (min-width: 769px), print{
+          .has-padding-bottom-3{
+              padding-bottom:3rem !important;
+          }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar is-fixed-top is-spaced has-shadow">
+<div class="navbar-brand">
+  <a class="navbar-item" href="#start" onclick="myFunctionTwo()">
+    
+    <img src="./images/rsz_1g1749.png" height="28" width="112"></a>
+ 
+    <a role="button"  id="hamburg" class="navbar-burger burger"
+  aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+  onclick="myFunction()">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+</div>
+<div class="navbar-menu">
+  <div class="navbar-end">
+    <a class="navbar-item is-size-4" href="#technology">Technology</a>
+    <a class="navbar-item is-size-4" href="#products">Products</a>
+    <a class="navbar-item is-size-4" href="#team">Team</a>
+    <a class="navbar-item is-size-4 has-text-primary" href="#cta">Make an enquiry</a>
+  </div>
+</div>
+    </nav>
+<div id="menu-mob" class="menu-back">
+<div class="menu-list">
+
+    <a class="link is-size-4" onclick="myFunctionTwo()" href="#technology">Technology</a>
+    <a class="link is-size-4" onclick="myFunctionTwo()" href="#products">Products</a>
+    <a class="link is-size-4" onclick="myFunctionTwo()" href="#team">Team</a>
+    <a class="link is-size-4 has-text-primary" onclick="myFunctionTwo()" href="#cta">Make an enquiry</a>
+  </div>
+</div>
+
+    <section class="hero is-light is-medium hero-pads dig" id="start">
+  <div class="hero-body has-padding-bottom-3">
+    <div class="container">
+      <h1 class="title is-size-1-mobile is-0-tablet has-text-weight-bold is-thin-spaced">
+        Digital</h1>
+ <h1 class="title is-size-1-mobile is-0-tablet has-text-weight-bold is-thin-spaced">
+        Vision
+ </h1>
+  <h1 class="title is-size-1-mobile is-0-tablet has-text-weight-bold is-thin-spaced">
+        Solutions
+  </h1>
+  <div class="columns">
+    <div class="column is-8">
+      <p class="subtitle is-4">Digital Vision Solutions provides innovative solutions in the areas of artificial intelligence and computer vision</p>
+</div>
+      <div class="column is-3">
+  <a class="button is-primary is-light is-large is-fullwidth is-outlined" href="#cta">Make an enquiry</a>
+  </div>
+  </div> 
+    </div>
+  </div>
+    </section>
+    <section class="section has-padding-top-100 back" id="technology">
+      <div class="container">
+         <p class="title is-title is-2-mobile is-0-tablet">The Rise of Machine Vision</p>
+        <div class="columns">
+          <div class="column is-5">
+<figure class="image is-3by1 parallax">
+      <img src="" alt="Placeholder image">
+    </figure>
+          </div>
+          <div class="column is-7">
+           
+            <div class="box">
+<p class="subtitle is-subtitle is-4">Over the past years, we have seen unparalleled levels of development in artificial intelligence, robotic process automation and computer vision.</p>
+</div>
+            </div>
+        </div>
+        <div class="columns direction-fix">
+          
+          <div class="column is-7">
+            
+<div class="box">
+<p class="subtitle is-subtitle is-4">Impressive growth of mobile computing and advances in neural networks research bring new opportunities for automation in increasingly competitive markets.</p>
+</div>
+          </div>
+          <div class="column is-5">
+<figure class="image is-3by1">
+      <img src="https://bulma.io/images/placeholders/640x480.png" alt="Placeholder image">
+    </figure>
+          </div>
+        </div>
+         <div class="columns">
+          <div class="column is-5">
+<figure class="image is-3by1">
+      <img src="https://bulma.io/images/placeholders/640x480.png" alt="Placeholder image">
+    </figure>
+          </div>
+          <div class="column is-7">
+            
+<div class="box">
+<p class="subtitle is-subtitle is-4">Employing the very latest techniques for image and video recognition, we offer automation products to several major industries.</p>
+</div>
+</div>
+          </div>
+        </div>
+    </section>
+   
+   
+
+<section class="section content has-padding-top-100 back3" id="products">
+  <div class="container">
+    <div class="columns is-vcentered direction-fix">
+      <div class="column is-half">
+        <div class="content">
+          <p class="heading">Product-counting engine</p>
+          <p class="title is-2">Oversee the production line in real time</p>
+          <p class="subtitle is-6">Digital Vision Solutions helps count produced items and control their quality to streamline your business.</p>
+          <div class="columns is-vcentered is-mobile">
+            <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-chart-bar has-text-link"></i>
+				</span>
+			</div>
+            <div class="column is-10"><div class="content is-size-6">
+                <p class="title is-size-5">Cost Efficiency</p>
+                <p class="subtitle is-size-6">Install a camera once and watch detections around the clock</p></div></div>
+          </div>
+          <div class="columns is-vcentered is-mobile">
+            <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-check-circle has-text-link"></i>
+				</span>
+			</div>
+            <div class="column is-10"><div class="content is-size-6">
+                <p class="title is-size-5">Identification</p>
+                <p class="subtitle is-size-6">Detect quality and types of produced items to track stocks</p></div></div>
+          </div>
+           <div class="columns is-vcentered is-mobile">
+             <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-handshake has-text-link"></i>
+				</span>
+			 </div>
+            <div class="column is-10"><div class="content is-size-6">
+                 <p class="title is-size-5">Flexible business model</p>
+                <p class="subtitle is-size-6">SaaS or offline software licensing to fit your unique case</p></div></div>
+          </div>
+           
+        </div>
+      </div>
+      <div class="column">
+      <div class="content">
+
+            <img class="image-mock-right" src="./images/output.gif">
+
+          </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <section class="section content back">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column">
+         <div class="content">
+
+            <img class="image-mock-left" src="./images/meters.png">
+
+          </div>
+      </div>
+      <div class="column is-half">
+        <div class="content">
+          <p class="heading">Data-gathering engine</p>
+          <p class="title is-2">We identify alphanumerical data from mobile images</p>
+          <p class="subtitle is-6">Digital Vision Solutions helps you detect and interpret data from a mobile device</p>
+          <div class="columns is-vcentered is-mobile">
+            <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-mobile-alt has-text-link"></i>
+				</span>
+			</div>
+            <div class="column is-10"><div class="content is-size-6">
+                <p class="title is-size-5">Mobile and distributed</p>
+                <p class="subtitle is-size-6">Gather data from multiple workers with a small phone app</p></div></div>
+          </div>
+          <div class="columns is-vcentered is-mobile">
+            <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-desktop has-text-link"></i>
+				</span>
+			</div>
+            <div class="column is-10"><div class="content is-size-6">
+                <p class="title is-size-5">Crossplatform</p>
+                <p class="subtitle is-size-6">Oversee interpreted results from Windows, MacOs, IOS, Android, Linux</p></div></div>
+          </div>
+           <div class="columns is-vcentered is-mobile">
+             <div class="column is-2 has-text-centered">
+				<span class="icon is-large">
+					<i class="fas fa-2x fa-layer-group has-text-link"></i>
+				</span>
+			 </div>
+            <div class="column is-10"><div class="content is-size-6">
+                 <p class="title is-size-5">Built to scale</p>
+                <p class="subtitle is-size-6">Grow and adapt the product to new use cases on the fly</p></div></div>
+          </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+
+<section class="section content has-padding-top-100 back2" id="team">
+  <div class="container">
+    <p class="title is-1 has-text-centered">Our team</p>
+    <p class="subtitle is-4">We are a team of experts in image processing, data science, robotics, software development and project management.</p>
+    <p class="subtitle is-4">Working with us means drawing on the experience and expertise of 5 professionals with cumulative experience of 12+ years, alumni of the Moscow State University, Moscow Institute of Physics and Technology, Nizhny Novgorod State Technical University.</p>
+    <p class="subtitle is-4">With 2 years of successful track record and several projects under our belt, we have learned to employ a large number of outsource staff to streamline every step of the production process.</p>
+  </div>
+</section>
+
+    <section class="section robo has-padding-top-100" id="cta">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="box">
+<div class="field">
+  <label class="label">First Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+</div>
+<div class="field">
+  <label class="label">Last Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+  </div>
+<div class="field">
+  <label class="label">Email</label>
+  <p class="control">
+    <input class="input" type="email" placeholder="Email">
+  </p>
+  </div>
+
+<button class="button is-primary is-fullwidth"><strong>Make an enquiry</strong></button>
+            </div>
+            </div>
+          </div>
+    </section>
+  
+    
+<footer class="footer has-text-centered has-background-light">
+      <div class="container">
+        <div class="content">
+   <p>Digital Vision Solutions, 2020</p>
+        </div>
+        <div class="columns">
+          <div class="column is-one-quarter"></div>
+          <div class="column">
+   <div class="level">
+         <div class="level-item has-text-centered"><a href="#technology" class="content link is-size-5 is-uppercase">Technology</a></div>
+          <div class="level-item has-text-centered"><a href="#products" class="content link is-size-5 is-uppercase">Products</a></div>
+          <div class="level-item has-text-centered"><a href="#team" class="content link is-size-5 is-uppercase">Team</a></div>
+   </div>
+          </div>
+          <div class="column is-one-quarter"></div>
+        </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="lib/main.js"></script>
+  </body>
+</html>
