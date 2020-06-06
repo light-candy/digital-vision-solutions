@@ -21,7 +21,7 @@
           background-size:cover;
          }
          .screen-6{
-          background-image:url('images/micro1.jpg');
+          background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)),url('images/street-ai-3.png');
           background-size:cover;
       }
       }
@@ -48,7 +48,7 @@
                background-size:cover;
            }
            .screen-6{
-               background-image:url('images/micro1.jpg');
+               background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/street-ai-3.png');
                background-size:cover;
            }
       }
@@ -128,46 +128,39 @@
            width:100%;
        }
        }
-/*  5.5 - parallax */
-      .parallax1 {
-          background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/micro.jpg');
-          height: 50px;
-          background-attachment: fixed;
-          background-position: center;
+       /*  5.5 - wide bakery image */
+       @media screen and (min-width:769px){
+      .wide-img {
+          background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/bakery-3.jpg');
+          height: 210px;
           background-repeat: no-repeat;
           background-size: cover;
           border: 1px solid #e2e2e2;
           border-radius: 4px;
           box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+
       }
-      .parallax2{
-          background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/micro.jpg');
-          height: 50px;
-          background-attachment: fixed;
+       }
+     
+     @media screen and (max-width:768px){
+            .wide-img {
+          background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/rsz_bakery-1.jpg');
+          height:110px;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
           border: 1px solid #e2e2e2;
           border-radius: 4px;
           box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
-      }
-       .parallax3{
-           background-image:linear-gradient(rgba(134,187,216, 0.3),rgba(134,187,216, 0.7)), url('images/micro.jpg');
-          height: 50px;
-          background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          border: 1px solid #e2e2e2;
-          border-radius: 4px;
-          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+
       }
 
-
+       }
+     
 /* 5.6 - make DVS header look better */
 
       .is-thin-spaced{
-          line-height:0.6;
+          line-height:0.7;
       }
      .is-medium-spaced{
           line-height:0.9;
@@ -234,3 +227,100 @@
               padding-bottom:3rem !important;
           }
       }
+/* 5.10 - spacy padding for a box*/
+      @media screen and (min-width: 769px){
+      .box-pads{
+          padding-top:2rem !important;
+          padding-bottom:2rem !important;
+          padding-left:1.25rem !important;
+          padding-right:1.25rem !important;
+      }
+      }
+ /* 5.11 - timeline */
+      .timeline-header{
+          margin-bottom:3em !important;
+      }
+      .timeline{
+    position:relative;
+    height:500px;
+    margin:0 auto;
+      }
+     
+.timeline::after {
+  content: '';
+  position: absolute;
+  height:6px;
+  background-color: #006cb5;
+  bottom:50%;
+  left:0;
+  right:0;
+  margin-right: -3px;
+}
+.stage-top {
+          min-height:182px;
+          position: relative;
+          background-color: inherit;
+          top:0;
+          border-bottom:3px solid #006cb5;
+          padding:0.5rem;
+          border-radius: 4px;
+          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+      }
+.stage-top::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #006cb5;
+  bottom:-68px;
+  border-radius: 50%;
+  z-index: 1;
+  left:0;
+}
+.stage-top::before{
+    content: '';
+    position: absolute;
+    width:2px;
+    background-color: #006cb5;
+    left:10px;
+    height:68px;
+    bottom:0;
+    margin-bottom:-68px;
+}
+
+
+.stage-bottom {
+          position: relative;
+          height: 182px;
+          background-color: inherit;
+          margin-top:72px;
+          padding:0.5rem;
+          border-top:3px solid #006cb5;
+          border-radius: 4px;
+          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+      }
+.stage-bottom::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #006cb5;
+  top:-60px;
+  border-radius: 50%;
+  z-index: 1;
+  left:-5px;
+      }
+
+.stage-bottom::before{
+    content: '';
+    position: absolute;
+    width:2px;
+    background-color: #006cb5;
+    left:5px;
+    top:0;
+    height:60px;
+    margin-top:-60px;
+      }
+
