@@ -56,14 +56,14 @@
 /*  5.2 - cta-button fix */
       .cta{
           color:#006cb5ff !important;
-          border: solid 2px #006cb5ff !important;
+          border:3px solid #006cb5ff !important;
       }
 
 /* 5.3 - product images, from driftrock */
       .image-mock-right{
           position: absolute;
           right: -300px;
-          top: 20px;
+          top: 60px;
           width: 728px;
           margin-top: 10px;
           border: 1px solid #e2e2e2;
@@ -74,7 +74,7 @@
           .image-mock-right{
           position: absolute;
           right: -350px;
-          top: 40px;
+          top: 65px;
           width: 728px;
           margin-top: 10px;
           }
@@ -91,8 +91,8 @@
 
        .image-mock-left{
           position: absolute;
-          left: -300px;
-          top: 60px;
+          right: -300px;
+          top: 90px;
           width: 728px;
           margin-top: 10px;
           border: 1px solid #e2e2e2;
@@ -102,8 +102,8 @@
        @media screen and (max-width: 1023px){
           .image-mock-left{
           position: absolute;
-          left: -350px;
-          top: 80px;
+          right: -350px;
+          top: 100px;
           width: 728px;
           margin-top: 10px;
           }
@@ -112,7 +112,7 @@
           .image-mock-left{
               position: relative;
               top: 0;
-              left: 0;
+              right: 0;
               width: 100%;
               margin-bottom: 30px;
           }
@@ -137,7 +137,8 @@
           background-size: cover;
           border: 1px solid #e2e2e2;
           border-radius: 4px;
-          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
+          border-left:3px solid #006cb5;
+
 
       }
        }
@@ -230,10 +231,11 @@
 /* 5.10 - spacy padding for a box*/
       @media screen and (min-width: 769px){
       .box-pads{
-          padding-top:2rem !important;
-          padding-bottom:2rem !important;
-          padding-left:1.25rem !important;
-          padding-right:1.25rem !important;
+          padding-top:3rem !important;
+          padding-bottom:3rem !important;
+          padding-left:3rem !important;
+          padding-right:3rem !important;
+          margin-top:20px;
       }
       }
  /* 5.11 - timeline */
@@ -259,12 +261,11 @@
 .stage-top {
           min-height:182px;
           position: relative;
-          background-color: inherit;
+          background-color:#fff;
           top:0;
           border-bottom:3px solid #006cb5;
           padding:0.5rem;
           border-radius: 4px;
-          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
       }
 .stage-top::after {
   content: '';
@@ -293,12 +294,11 @@
 .stage-bottom {
           position: relative;
           height: 182px;
-          background-color: inherit;
+          background-color:#fff;
           margin-top:72px;
           padding:0.5rem;
           border-top:3px solid #006cb5;
           border-radius: 4px;
-          box-shadow: 4px 4px 33px 0 rgba(0,0,0,.1);
       }
 .stage-bottom::after {
   content: '';
@@ -324,3 +324,65 @@
     margin-top:-60px;
       }
 
+/*5.12 - margin fix for content class*/
+.has-margin-bottom-0{
+          margin-bottom:0 !important;
+      }
+.has-margin-bottom-half{
+          margin-bottom:0.5rem !important;
+      }
+/*5.13 - custom box class*/
+.blue-box-left{
+          background-color:#fff;
+          border-radius:6px;
+          color:#4a4a4a;
+          display:block;
+          padding:1.25rem;
+          border-left:3px solid #006cb5;
+      }
+@media screen and (max-width:768px){
+          .blue-box-left{
+          background-color:inherit;
+          border-radius:6px;
+          color:#4a4a4a;
+          display:block;
+          padding:1.25rem;
+          border-left:none;
+      }
+      }
+.blue-box-right{
+          background-color:#fff;
+          border-radius:6px;
+          color:#4a4a4a;
+          display:block;
+          padding:1.25rem;
+          border-right:3px solid #006cb5;
+      }
+@media screen and (max-width:768px){
+          .blue-box-right{
+              background-color:inherit;
+              color:#4a4a4a;
+              display:block;
+              padding:1.25rem;
+              border-right:none;
+          }
+      }
+.blue-box-top{
+          background-color:#fff;
+          border-radius:6px;
+          color:#4a4a4a;
+          display:block;
+          padding:1.25rem;
+          border-top:3px solid #006cb5;
+      }
+
+/*5.14 - font-weight for the form*/
+.font-400{
+          font-weight:400 !important;
+      }
+/*5.15 - padding-bottom-0*/
+@media screen and (max-width:768px){
+.has-padding-bottom-0{
+          padding-bottom:0rem !important;
+      }
+      }
